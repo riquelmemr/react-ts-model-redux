@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import {
 	SetUserLogged,
 	setUserLogged,
-} from '../../store/modules/users/usersSlice';
+} from '../../store/modules/userLogged/userLoggedSlice';
 
 const Welcome: React.FC = () => {
 	const dispatch = useAppDispatch();
