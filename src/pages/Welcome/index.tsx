@@ -1,10 +1,8 @@
 import React from 'react';
 
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import {
-	SetUserLogged,
-	setUserLogged,
-} from '../../store/modules/userLogged/userLoggedSlice';
+import { setUserLogged } from '../../store/modules/userLogged/userLoggedSlice';
+import { UserLogged } from '../../types/user';
 
 const Welcome: React.FC = () => {
 	const dispatch = useAppDispatch();
@@ -18,7 +16,7 @@ const Welcome: React.FC = () => {
 		console.log(e.currentTarget.username.value);
 		console.log(e.currentTarget.email.value);
 
-		const user: SetUserLogged = {
+		const user: UserLogged = {
 			name: e.currentTarget.username.value,
 			email: e.currentTarget.email.value,
 		};

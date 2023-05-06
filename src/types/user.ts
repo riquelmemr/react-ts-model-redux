@@ -5,4 +5,4 @@ export interface User {
 	isLogged: boolean;
 }
 
-export type SetUserLogged = Omit<User, 'isLogged' | 'id'>;
+export type UserLogged = Omit<User, 'isLogged' | 'id'>;
