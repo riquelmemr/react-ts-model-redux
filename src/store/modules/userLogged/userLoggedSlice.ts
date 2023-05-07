@@ -34,8 +34,5 @@ export const userLoggedSlice = createSlice({
 });
 
 export const { setUserLogged, removeUserLogged } = userLoggedSlice.actions;
-
-// Other code such as selectors can use the imported `RootState` type
 export const selectUserLogged = (state: RootState) => state.userLogged;
-
 export default userLoggedSlice.reducer;
