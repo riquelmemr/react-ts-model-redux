@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { setUserLogged } from '../../store/modules/userLogged/userLoggedSlice';
@@ -7,6 +8,7 @@ import { UserLogged } from '../../types/user';
 const Welcome: React.FC = () => {
 	const dispatch = useAppDispatch();
 	const userLogged = useAppSelector((state) => state.userLogged);
+	const navigate = useNavigate();
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -22,6 +24,7 @@ const Welcome: React.FC = () => {
 		};
 
 		dispatch(setUserLogged(user));
+		navigate('/posts');
 	};
 
 	return (

@@ -20,14 +20,14 @@ export const userLoggedSlice = createSlice({
 	reducers: {
 		setUserLogged: (state, action: PayloadAction<UserLogged>) => {
 			return {
-				id: new Date().toString(),
+				id: new Date().getTime().toString(),
 				name: action.payload.name,
 				email: action.payload.email,
 				isLogged: true,
 			};
 		},
 
-		removeUserLogged: (state) => {
+		removeUserLogged: () => {
 			return initialState;
 		},
 	},
